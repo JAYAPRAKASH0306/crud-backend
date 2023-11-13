@@ -75,9 +75,6 @@ app.use(cors()); // Enable CORS for all routes
 app.listen(port, () => {
     console.log(`Server connected on port ${port}`);
 });
-mongoose.connect(process.env.DB,{
-    usenewurlparser :true ,
-    useunifiedtopology :true 
-}).then(console.log("db connected"))
+mongoose.connect(process.env.DB).then(console.log("db connected"))
 .catch("error in connecting db")
 
